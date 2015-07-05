@@ -41,7 +41,6 @@ class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
                     questionLabel.text = questionText as? String ?? ""
                     quoteLabel.text = quoteText as? String ?? ""
                     authorLabel.text = authorText as? String ?? ""
-                    
         }
     }
     @IBAction func sliderDidSlide(sender: AnyObject) {

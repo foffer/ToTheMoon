@@ -50,15 +50,6 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         } else {
             scoreArr?.append(score)
         }
-        print(scoreArr)
-//        let currentIndexPath = self.collectionView?.indexPathForItemAtPoint(CGPoint(x: 20,y: 20))
-//        print(currentIndexPath)
-//        var newLast = currentIndexPath?.indexAtPosition(currentIndexPath!.length - 1)
-//        newLast = newLast! + 1
-//        let newIndexPath = currentIndexPath?.indexPathByRemovingLastIndex().indexPathByAddingIndex(newLast!)
-//        print(newIndexPath)
-//        self.collectionView?.scrollToItemAtIndexPath(newIndexPath!, atScrollPosition: .CenteredVertically, animated: false)
-        
     }
     
     func changeCell(sender: AnyObject) {
