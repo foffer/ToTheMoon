@@ -16,6 +16,7 @@
 		30C3879D1B4717C400D1A241 /* To_The_MoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3879C1B4717C400D1A241 /* To_The_MoonUITests.swift */; };
 		30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */; };
 		30EDDA6F1B4932C90025A936 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDDA6E1B4932C90025A936 /* Data.swift */; };
+		597AD7F91B49ACB80039D265 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		30C3879E1B4717C400D1A241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		30EDDA6E1B4932C90025A936 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				30C3877E1B4717C400D1A241 /* MainViewController.swift */,
 				30EDDA6E1B4932C90025A936 /* Data.swift */,
 				30C387801B4717C400D1A241 /* Main.storyboard */,
+				597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */,
 				30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */,
 				30C387831B4717C400D1A241 /* Assets.xcassets */,
 				30C387851B4717C400D1A241 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 				TargetAttributes = {
 					30C387781B4717C400D1A241 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = JCTFWGGXAN;
 					};
 					30C3878C1B4717C400D1A241 = {
 						CreatedOnToolsVersion = 7.0;
@@ -261,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597AD7F91B49ACB80039D265 /* CollectionViewFlowLayout.swift in Sources */,
 				30C3877F1B4717C400D1A241 /* MainViewController.swift in Sources */,
 				30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */,
 				30C3877D1B4717C400D1A241 /* AppDelegate.swift in Sources */,
@@ -404,11 +409,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "To The Moon/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cewb.To-The-Moon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -416,11 +424,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "To The Moon/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.cewb.To-The-Moon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
