@@ -21,11 +21,15 @@ class MainViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return Data.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("questionCell", forIndexPath: indexPath) as! QuestionCollectionViewCell
+        
+        let question = Data[indexPath.item]
+        cell.configureCell(question)
+        return cell
     }
 
 

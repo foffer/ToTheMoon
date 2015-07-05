@@ -11,6 +11,7 @@
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-UltraLight</string>
+            <string>AvenirNext-Italic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -28,7 +29,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NIL-fr-Pop">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionCell" id="NIL-fr-Pop" customClass="QuestionCollectionViewCell" customModule="To_The_Moon" customModuleProvider="target">
                                 <rect key="frame" x="50" y="0.0" width="500" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -62,8 +63,14 @@
                                             </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yru-0K-0M6">
-                                            <rect key="frame" x="190" y="295" width="121" height="66"/>
+                                            <rect key="frame" x="190" y="295" width="120.5" height="66"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="48"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-hB-Uo5">
+                                            <rect key="frame" x="231" y="92" width="38" height="17"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -76,14 +83,24 @@
                                     <constraint firstItem="jkx-5r-doT" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="CXt-J0-aWJ"/>
                                     <constraint firstItem="kqP-L9-m6N" firstAttribute="leading" secondItem="NIL-fr-Pop" secondAttribute="leadingMargin" id="Qau-zV-l3Q"/>
                                     <constraint firstItem="jkx-5r-doT" firstAttribute="top" secondItem="NIL-fr-Pop" secondAttribute="topMargin" constant="10" id="RMv-gI-p2O"/>
+                                    <constraint firstItem="cmV-hB-Uo5" firstAttribute="top" secondItem="siP-qc-gjw" secondAttribute="bottom" constant="5" id="V3x-pF-PSo"/>
                                     <constraint firstItem="siP-qc-gjw" firstAttribute="top" secondItem="jkx-5r-doT" secondAttribute="bottom" constant="11" id="VGq-AB-EPE"/>
                                     <constraint firstItem="TfX-Gc-prR" firstAttribute="centerY" secondItem="NIL-fr-Pop" secondAttribute="centerY" id="a4u-Uf-o7B"/>
                                     <constraint firstItem="TfX-Gc-prR" firstAttribute="trailing" secondItem="NIL-fr-Pop" secondAttribute="trailingMargin" id="eDH-bj-6j4"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="kqP-L9-m6N" secondAttribute="bottom" constant="14" id="hKa-1F-ZXa"/>
                                     <constraint firstItem="Yru-0K-0M6" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="q3j-0P-lNe"/>
+                                    <constraint firstItem="cmV-hB-Uo5" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="scK-e6-63p"/>
                                     <constraint firstItem="kqP-L9-m6N" firstAttribute="trailing" secondItem="NIL-fr-Pop" secondAttribute="trailingMargin" id="xNI-C0-yZw"/>
                                     <constraint firstItem="Yru-0K-0M6" firstAttribute="top" secondItem="TfX-Gc-prR" secondAttribute="bottom" constant="30" id="yMN-xJ-Lz1"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="authorLabel" destination="cmV-hB-Uo5" id="dGW-jL-Esm"/>
+                                    <outlet property="nextButton" destination="kqP-L9-m6N" id="xkO-ha-pyT"/>
+                                    <outlet property="questionLabel" destination="jkx-5r-doT" id="x2L-RM-SBj"/>
+                                    <outlet property="quoteLabel" destination="siP-qc-gjw" id="6JC-XU-pit"/>
+                                    <outlet property="scoreLabel" destination="Yru-0K-0M6" id="GTI-0s-Twj"/>
+                                    <outlet property="scoreSlider" destination="TfX-Gc-prR" id="hpe-iX-9GQ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

@@ -11,16 +11,25 @@ import UIKit
 
 class QuestionCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var questionLabel : UILabel!
+    @IBOutlet var quoteLabel    : UILabel!
+    @IBOutlet var authorLabel   : UILabel!
+    @IBOutlet var scoreLabel    : UILabel!
+    @IBOutlet var scoreSlider   : UISlider!
+    @IBOutlet var nextButton    : UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupCell()
     }
     
     override func layoutSubviews() {
         
     }
     
-    func setupCell() {
-        
+    func configureCell(question:AnyObject) {
+        if let questionText, quoteText, authorText = question["title"], question["quote"], question["author"] as String {
+            
+        }
     }
 }
