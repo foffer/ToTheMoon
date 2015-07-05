@@ -14,6 +14,8 @@
 		30C387871B4717C400D1A241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C387851B4717C400D1A241 /* LaunchScreen.storyboard */; };
 		30C387921B4717C400D1A241 /* To_The_MoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C387911B4717C400D1A241 /* To_The_MoonTests.swift */; };
 		30C3879D1B4717C400D1A241 /* To_The_MoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3879C1B4717C400D1A241 /* To_The_MoonUITests.swift */; };
+		30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */; };
+		30EDDA6F1B4932C90025A936 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDDA6E1B4932C90025A936 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		30C387981B4717C400D1A241 /* To The MoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To The MoonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C3879C1B4717C400D1A241 /* To_The_MoonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_The_MoonUITests.swift; sourceTree = "<group>"; };
 		30C3879E1B4717C400D1A241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		30EDDA6E1B4932C90025A936 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			children = (
 				30C3877C1B4717C400D1A241 /* AppDelegate.swift */,
 				30C3877E1B4717C400D1A241 /* MainViewController.swift */,
+				30EDDA6E1B4932C90025A936 /* Data.swift */,
 				30C387801B4717C400D1A241 /* Main.storyboard */,
+				30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */,
 				30C387831B4717C400D1A241 /* Assets.xcassets */,
 				30C387851B4717C400D1A241 /* LaunchScreen.storyboard */,
 				30C387881B4717C400D1A241 /* Info.plist */,
@@ -256,7 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C3877F1B4717C400D1A241 /* MainViewController.swift in Sources */,
+				30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */,
 				30C3877D1B4717C400D1A241 /* AppDelegate.swift in Sources */,
+				30EDDA6F1B4932C90025A936 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +491,7 @@
 				30C387A31B4717C400D1A241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30C387A41B4717C400D1A241 /* Build configuration list for PBXNativeTarget "To The MoonTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +500,7 @@
 				30C387A61B4717C400D1A241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30C387A71B4717C400D1A241 /* Build configuration list for PBXNativeTarget "To The MoonUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +509,7 @@
 				30C387A91B4717C400D1A241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
