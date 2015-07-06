@@ -48,6 +48,9 @@ class IdeasTableViewController: UITableViewController {
             performSegueWithIdentifier("newIdeaSegue", sender: self)
         }
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showIdeaDetailSegue", sender: self)
+    }
     @IBAction func addDidPress(sender: AnyObject) {
         performSegueWithIdentifier("newIdeaSegue", sender: self)
     }
@@ -66,5 +69,12 @@ class IdeasTableViewController: UITableViewController {
         }
         fetchData()
         
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showIdeaDetailSegue" {
+            let toVC = segue.destinationViewController as! IdeaDetailTableView
+            let indexPath = tableView.indexPathForSelectedRow
+            toVC.idea = ideaArr![indexPath!.row]
+        }
     }
 }

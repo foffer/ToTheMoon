@@ -16,6 +16,8 @@
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
+            <string>AvenirNext-UltraLight</string>
+            <string>AvenirNext-UltraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -201,11 +203,64 @@
                     </navigationItem>
                     <connections>
                         <segue destination="qcL-IK-IQd" kind="presentation" identifier="newIdeaSegue" id="5JO-8Z-xgv"/>
+                        <segue destination="GM9-zn-S8I" kind="show" identifier="showIdeaDetailSegue" id="Lxd-RG-iCv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FS3-Jq-wyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="678" y="167"/>
+        </scene>
+        <!--Idea Detail Table View-->
+        <scene sceneID="t6t-dh-vbK">
+            <objects>
+                <tableViewController id="GM9-zn-S8I" customClass="IdeaDetailTableView" customModule="To_The_Moon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fej-dC-2tT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ideaDetailQuestionCell" id="We2-bV-Fkb" customClass="IdeaDetailTableViewCell" customModule="To_The_Moon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="We2-bV-Fkb" id="zft-Y1-tX0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWJ-rM-Vqd">
+                                            <rect key="frame" x="8" y="6" width="100" height="33"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcX-Ih-RdV">
+                                            <rect key="frame" x="531" y="5" width="60.5" height="33"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TcX-Ih-RdV" firstAttribute="centerY" secondItem="zft-Y1-tX0" secondAttribute="centerY" id="6dL-hn-VXM"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="AWJ-rM-Vqd" secondAttribute="leading" id="883-0p-yu3"/>
+                                        <constraint firstItem="AWJ-rM-Vqd" firstAttribute="centerY" secondItem="zft-Y1-tX0" secondAttribute="centerY" id="ZHx-g5-pxU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TcX-Ih-RdV" secondAttribute="trailing" id="huF-Wf-fCb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="questionLabel" destination="AWJ-rM-Vqd" id="iiu-o3-IIT"/>
+                                    <outlet property="scoreLabel" destination="TcX-Ih-RdV" id="v8w-Nx-ipl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GM9-zn-S8I" id="ggb-pr-Zbe"/>
+                            <outlet property="delegate" destination="GM9-zn-S8I" id="oF3-gf-xoL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddm-bZ-Kjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363" y="167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CXq-jy-vLA">

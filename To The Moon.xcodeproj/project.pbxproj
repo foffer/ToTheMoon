@@ -20,6 +20,8 @@
 		5944B3C21B4A91830030688A /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944B3C11B4A91830030688A /* Idea.swift */; };
 		59749AB11B4B0BA400966B2E /* IdeasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB01B4B0BA400966B2E /* IdeasTableViewController.swift */; };
 		59749AB31B4B0F2000966B2E /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */; };
+		59749ABA1B4B39EA00966B2E /* IdeaDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB91B4B39EA00966B2E /* IdeaDetailTableView.swift */; };
+		59749ABC1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749ABB1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift */; };
 		CEFFE910E218893E9B8E5EAD /* Pods_To_The_Moon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		5944B3C11B4A91830030688A /* Idea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		59749AB01B4B0BA400966B2E /* IdeasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeasTableViewController.swift; sourceTree = "<group>"; };
 		59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
+		59749AB91B4B39EA00966B2E /* IdeaDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaDetailTableView.swift; sourceTree = "<group>"; };
+		59749ABB1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaDetailTableViewCell.swift; sourceTree = "<group>"; };
 		5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_The_Moon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB976A43DDE36B014720B66 /* Pods-To The Moon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.debug.xcconfig"; sourceTree = "<group>"; };
 		ECAC2988D5C5372DBC79B421 /* Pods-To The Moon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.release.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,11 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				30C3877C1B4717C400D1A241 /* AppDelegate.swift */,
+				59749AB71B4B2DF300966B2E /* Ideas */,
 				59749AB61B4B2DEC00966B2E /* New Idea */,
 				30C387801B4717C400D1A241 /* Main.storyboard */,
-				59749AB71B4B2DF300966B2E /* Ideas */,
 				5944B3BE1B4A83810030688A /* Model */,
 				59749AB81B4B2E0A00966B2E /* Supporting Files */,
+				59749AB91B4B39EA00966B2E /* IdeaDetailTableView.swift */,
+				59749ABB1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift */,
 			);
 			path = "To The Moon";
 			sourceTree = "<group>";
@@ -383,11 +389,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5944B3C21B4A91830030688A /* Idea.swift in Sources */,
+				59749ABC1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift in Sources */,
 				30C3877F1B4717C400D1A241 /* NewIdeaViewController.swift in Sources */,
 				30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */,
 				59749AB31B4B0F2000966B2E /* IdeaTableViewCell.swift in Sources */,
 				5944B3C01B4A8D560030688A /* Question.swift in Sources */,
 				30C3877D1B4717C400D1A241 /* AppDelegate.swift in Sources */,
+				59749ABA1B4B39EA00966B2E /* IdeaDetailTableView.swift in Sources */,
 				59749AB11B4B0BA400966B2E /* IdeasTableViewController.swift in Sources */,
 				30EDDA6F1B4932C90025A936 /* Data.swift in Sources */,
 			);
