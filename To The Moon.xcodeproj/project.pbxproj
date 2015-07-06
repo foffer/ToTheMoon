@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30C3877D1B4717C400D1A241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3877C1B4717C400D1A241 /* AppDelegate.swift */; };
-		30C3877F1B4717C400D1A241 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3877E1B4717C400D1A241 /* MainViewController.swift */; };
+		30C3877F1B4717C400D1A241 /* NewIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3877E1B4717C400D1A241 /* NewIdeaViewController.swift */; };
 		30C387821B4717C400D1A241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C387801B4717C400D1A241 /* Main.storyboard */; };
 		30C387841B4717C400D1A241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C387831B4717C400D1A241 /* Assets.xcassets */; };
 		30C387871B4717C400D1A241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C387851B4717C400D1A241 /* LaunchScreen.storyboard */; };
@@ -18,7 +18,8 @@
 		30EDDA6F1B4932C90025A936 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDDA6E1B4932C90025A936 /* Data.swift */; };
 		5944B3C01B4A8D560030688A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944B3BF1B4A8D560030688A /* Question.swift */; };
 		5944B3C21B4A91830030688A /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944B3C11B4A91830030688A /* Idea.swift */; };
-		597AD7F91B49ACB80039D265 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */; };
+		59749AB11B4B0BA400966B2E /* IdeasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB01B4B0BA400966B2E /* IdeasTableViewController.swift */; };
+		59749AB31B4B0F2000966B2E /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */; };
 		CEFFE910E218893E9B8E5EAD /* Pods_To_The_Moon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,7 +43,7 @@
 /* Begin PBXFileReference section */
 		30C387791B4717C400D1A241 /* To The Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To The Moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C3877C1B4717C400D1A241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30C3877E1B4717C400D1A241 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		30C3877E1B4717C400D1A241 /* NewIdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIdeaViewController.swift; sourceTree = "<group>"; };
 		30C387811B4717C400D1A241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30C387831B4717C400D1A241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C387861B4717C400D1A241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +58,8 @@
 		30EDDA6E1B4932C90025A936 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		5944B3BF1B4A8D560030688A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5944B3C11B4A91830030688A /* Idea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
-		597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		59749AB01B4B0BA400966B2E /* IdeasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeasTableViewController.swift; sourceTree = "<group>"; };
+		59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
 		5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_The_Moon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB976A43DDE36B014720B66 /* Pods-To The Moon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.debug.xcconfig"; sourceTree = "<group>"; };
 		ECAC2988D5C5372DBC79B421 /* Pods-To The Moon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.release.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,15 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				30C3877C1B4717C400D1A241 /* AppDelegate.swift */,
-				30C3877E1B4717C400D1A241 /* MainViewController.swift */,
-				5944B3BE1B4A83810030688A /* Model */,
-				30EDDA6E1B4932C90025A936 /* Data.swift */,
+				59749AB61B4B2DEC00966B2E /* New Idea */,
 				30C387801B4717C400D1A241 /* Main.storyboard */,
-				597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */,
-				30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */,
-				30C387831B4717C400D1A241 /* Assets.xcassets */,
-				30C387851B4717C400D1A241 /* LaunchScreen.storyboard */,
-				30C387881B4717C400D1A241 /* Info.plist */,
+				59749AB71B4B2DF300966B2E /* Ideas */,
+				5944B3BE1B4A83810030688A /* Model */,
+				59749AB81B4B2E0A00966B2E /* Supporting Files */,
 			);
 			path = "To The Moon";
 			sourceTree = "<group>";
@@ -149,10 +147,39 @@
 		5944B3BE1B4A83810030688A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30EDDA6E1B4932C90025A936 /* Data.swift */,
 				5944B3BF1B4A8D560030688A /* Question.swift */,
 				5944B3C11B4A91830030688A /* Idea.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		59749AB61B4B2DEC00966B2E /* New Idea */ = {
+			isa = PBXGroup;
+			children = (
+				30C3877E1B4717C400D1A241 /* NewIdeaViewController.swift */,
+				30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */,
+			);
+			name = "New Idea";
+			sourceTree = "<group>";
+		};
+		59749AB71B4B2DF300966B2E /* Ideas */ = {
+			isa = PBXGroup;
+			children = (
+				59749AB01B4B0BA400966B2E /* IdeasTableViewController.swift */,
+				59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */,
+			);
+			name = Ideas;
+			sourceTree = "<group>";
+		};
+		59749AB81B4B2E0A00966B2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30C387831B4717C400D1A241 /* Assets.xcassets */,
+				30C387851B4717C400D1A241 /* LaunchScreen.storyboard */,
+				30C387881B4717C400D1A241 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6C6431DE095E13DC44191AA2 /* Pods */ = {
@@ -356,11 +383,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5944B3C21B4A91830030688A /* Idea.swift in Sources */,
-				597AD7F91B49ACB80039D265 /* CollectionViewFlowLayout.swift in Sources */,
-				30C3877F1B4717C400D1A241 /* MainViewController.swift in Sources */,
+				30C3877F1B4717C400D1A241 /* NewIdeaViewController.swift in Sources */,
 				30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */,
+				59749AB31B4B0F2000966B2E /* IdeaTableViewCell.swift in Sources */,
 				5944B3C01B4A8D560030688A /* Question.swift in Sources */,
 				30C3877D1B4717C400D1A241 /* AppDelegate.swift in Sources */,
+				59749AB11B4B0BA400966B2E /* IdeasTableViewController.swift in Sources */,
 				30EDDA6F1B4932C90025A936 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

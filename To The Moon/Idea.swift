@@ -11,6 +11,12 @@ import RealmSwift
 
 class Idea: Object {
     dynamic var createdAt = NSDate(timeIntervalSince1970: 1)
+    dynamic var name = ""
+    dynamic var uuid = ""
+    dynamic var overallScore = 0
     let questions = List<Question>()
-
+    
+    override static func primaryKey() -> String {
+        return "uuid"
+    }
 }

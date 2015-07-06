@@ -9,15 +9,16 @@
 import UIKit
 import RealmSwift
 
-class MainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, QuestionInterface {
+class NewIdeaViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, QuestionInterface {
 
     var scoreArr:Array<Question>?
     var nextIndexPath: NSIndexPath?
+    var ideaName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
-        
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +33,7 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("questionCell", forIndexPath: indexPath) as! QuestionCollectionViewCell
         
         let question = Data[indexPath.item]
-        
+
         cell.configureCell(question)
         cell.delegate = self
 
@@ -63,21 +64,47 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView?.scrollToItemAtIndexPath(nextIndexPath!, atScrollPosition: .CenteredHorizontally, animated: false)
     }
     func doneDidPress(sender: AnyObject) {
-
+        
+        let alertVC = UIAlertController(title: "Name", message: "Please type in a name for your idea", preferredStyle: .Alert)
+        let nameAction = UIAlertAction(title: "Add", style: .Default) { _ in
+            let nameTextField = alertVC.textFields![0] as UITextField
+            self.ideaName = nameTextField.text! ?? ""
+            self.createIdea()
+        }
+        alertVC.addTextFieldWithConfigurationHandler { textField in
+            textField.placeholder = "Name"
+        }
+        
+        alertVC.addAction(nameAction)
+        self.presentViewController(alertVC, animated: true, completion: nil)
+    }
+    
+    func createIdea() {
         let idea = Idea()
         idea.createdAt = NSDate()
+        idea.name = ideaName
+        idea.uuid = NSUUID().UUIDString
         
+        var average = 0
         for q in scoreArr! {
             idea.questions.append(q)
+            average += q.score
         }
-        do {
-            let realm = try Realm()
+        idea.overallScore = average / scoreArr!.count
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
+            let realm = try! Realm()
             realm.write {
                 realm.add(idea)
             }
-        } catch {
-            print(error)
+            dispatch_async(dispatch_get_main_queue()) {
+                self.dismissDidPress(nil)
+            }
         }
+    }
+    func dismissDidPress(sender: AnyObject?) {
+        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

@@ -11,6 +11,7 @@ import UIKit
 
 protocol QuestionInterface {
     func nextDidPress(sender:AnyObject)
+    func dismissDidPress(sender:AnyObject?)
 }
 
 class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
@@ -64,5 +65,8 @@ class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
         super.prepareForReuse()
         scoreSlider.value = 5.0
         scoreLabel.text = "5"
+    }
+    @IBAction func dismissDidPress(sender: AnyObject?) {
+        delegate?.dismissDidPress(nil)
     }
 }

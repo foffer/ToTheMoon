@@ -30,15 +30,17 @@ let Data = [
         "quote" : "I think most of the dramatic new ideas come from little companies that then grow big.", "author" : "JARON LANIER"],
     ["title" : "Speed to Market",
         "question" : "How quickly can you create and sell?",
-        "quote" : "Test fast, fail fast, adjust fast.", "author" : "TOM PETERS"],
+        "quote" : "Test fast, fail fast, adjust fast.",
+        "author" : "TOM PETERS"],
     ["title" : "Up-Front Investment",
         "question" : "How much do you have to invest before having an offer ready?",
-        "quote" : "needs quote \n- NONE"],
+        "quote" : "needs quote", "author" : "needs author"],
     ["title" : "Up-Sell Potential",
         "question" : "What related offers could you present to purchasing customers?",
-        "quote" : "needs quote \n- NONE"],
+        "quote" : "needs quote", "author" : "needs author"],
     ["title" : "Evergreen Potential",
-        "question" : "Once the offer is created, how much work do you have to put into it to con- tinue selling?"]
+        "question" : "Once the offer is created, how much work do you have to put into it to con- tinue selling?",
+    "quote" : "needs quote", "author" : "needs author"]
     
     
 ]
