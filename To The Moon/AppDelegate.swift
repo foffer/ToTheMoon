@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        print(Realm.defaultPath)
+        setSchemaVersion(1, realmPath: Realm.defaultPath) { migration, oldSchemaVersion in
+            if oldSchemaVersion < 1 {
+                
+            }
+        }
         return true
     }
 

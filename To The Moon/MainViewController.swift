@@ -32,10 +32,10 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("questionCell", forIndexPath: indexPath) as! QuestionCollectionViewCell
         
         let question = Data[indexPath.item]
-        cell.configureCell(question)
         
+        cell.configureCell(question)
         cell.delegate = self
-        print(indexPath.item)
+
         if indexPath.item <= 7 {
             let newIndex = indexPath.indexAtPosition(indexPath.length - 1) + 1
             nextIndexPath = indexPath.indexPathByRemovingLastIndex().indexPathByAddingIndex(newIndex)
@@ -64,17 +64,20 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     func doneDidPress(sender: AnyObject) {
 
-//        let idea = Idea()
-//        idea.createdAt = NSDate()
-//        
-//        for q in scoreArr! {
-//            idea.questions.append(q)
-//        }
-//        do {
-//
-//        } catch {
-//            print(error)
-//        }
+        let idea = Idea()
+        idea.createdAt = NSDate()
+        
+        for q in scoreArr! {
+            idea.questions.append(q)
+        }
+        do {
+            let realm = try Realm()
+            realm.write {
+                realm.add(idea)
+            }
+        } catch {
+            print(error)
+        }
     }
 }
 

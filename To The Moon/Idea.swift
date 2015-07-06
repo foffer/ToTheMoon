@@ -10,11 +10,7 @@ import Foundation
 import RealmSwift
 
 class Idea: Object {
-//    dynamic var id = 0
-    dynamic var createdAt = NSDate()
+    dynamic var createdAt = NSDate(timeIntervalSince1970: 1)
     let questions = List<Question>()
-    
-//    override static func primaryKey() -> String? {
-//        return "id"
-//    }
+
 }
