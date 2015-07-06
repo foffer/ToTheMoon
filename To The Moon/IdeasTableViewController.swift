@@ -51,4 +51,20 @@ class IdeasTableViewController: UITableViewController {
     @IBAction func addDidPress(sender: AnyObject) {
         performSegueWithIdentifier("newIdeaSegue", sender: self)
     }
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .Destructive, title: "Delete") { action, indexPath in
+            self.deleteIdea(indexPath)
+        }
+        return [deleteAction]
+    }
+    func deleteIdea(indexPath:NSIndexPath) {
+        
+        let realm = try! Realm()
+        let idea = ideaArr![indexPath.row]
+        realm.write {
+            realm.delete(idea)
+        }
+        fetchData()
+        
+    }
 }
