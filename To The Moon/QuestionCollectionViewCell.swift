@@ -34,13 +34,13 @@ class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
         super.layoutSubviews()
     }
     
-    func configureCell(question:AnyObject) {
+    func configureCell(question:[String:String]) {
         if let  questionText = question["title"],
                 quoteText = question["quote"],
                 authorText = question["author"] {
-                    questionLabel.text = questionText as? String ?? ""
-                    quoteLabel.text = quoteText as? String ?? ""
-                    authorLabel.text = authorText as? String ?? ""
+                    questionLabel.text = questionText ?? ""
+                    quoteLabel.text = quoteText ?? ""
+                    authorLabel.text = authorText ?? ""
         }
     }
     @IBAction func sliderDidSlide(sender: AnyObject) {
@@ -49,12 +49,15 @@ class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
         }
     }
     @IBAction func nextDidPress(sender: AnyObject) {
-        let score = [
-            "question" : "\(questionLabel.text!)",
-            "score" : scoreSlider.value
-        ]
+//        let score = [
+//            "question" : "\(questionLabel.text!)",
+//            "score" : scoreSlider.value
+//        ]
+        let q = Question()
+        q.question = questionLabel.text!
+        q.score = Int(scoreSlider.value)
 
-        delegate?.nextDidPress(score)
+        delegate?.nextDidPress(q)
 
     }
     override func prepareForReuse() {

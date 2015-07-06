@@ -11,7 +11,7 @@ import RealmSwift
 
 class MainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, QuestionInterface {
 
-    var scoreArr:Array<Dictionary<String, AnyObject>>?
+    var scoreArr:Array<Question>?
     var nextIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
@@ -50,12 +50,12 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         return CGSizeMake(self.collectionView!.bounds.width,self.collectionView!.bounds.height)
     }
     func nextDidPress(sender: AnyObject) {
-        guard let score = sender as? Dictionary<String,AnyObject> else {return}
+        guard let q = sender as? Question else {return}
         
         if scoreArr == nil {
-            scoreArr = [score]
+            scoreArr = [q]
         } else {
-            scoreArr?.append(score)
+            scoreArr?.append(q)
         }
     }
     
@@ -63,16 +63,18 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView?.scrollToItemAtIndexPath(nextIndexPath!, atScrollPosition: .CenteredHorizontally, animated: false)
     }
     func doneDidPress(sender: AnyObject) {
-§
-        do {
-            let realm = try Realm()
-            
-            
-            realm.write {
-            }
-        } catch {
-            print(error)
-        }
+
+//        let idea = Idea()
+//        idea.createdAt = NSDate()
+//        
+//        for q in scoreArr! {
+//            idea.questions.append(q)
+//        }
+//        do {
+//
+//        } catch {
+//            print(error)
+//        }
     }
 }
 
