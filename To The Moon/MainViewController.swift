@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, QuestionInterface {
 
-    var scoreArr:Array<Dictionary<String,AnyObject>>?
+    var scoreArr:Array<Dictionary<String, AnyObject>>?
     var nextIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
@@ -32,11 +33,17 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
         
         let question = Data[indexPath.item]
         cell.configureCell(question)
+        
         cell.delegate = self
-        print(indexPath)
-        let newIndex = indexPath.indexAtPosition(indexPath.length - 1) + 1
-        nextIndexPath = indexPath.indexPathByRemovingLastIndex().indexPathByAddingIndex(newIndex)
-        cell.nextButton.addTarget(self, action: "changeCell:", forControlEvents: .TouchUpInside)
+        print(indexPath.item)
+        if indexPath.item <= 7 {
+            let newIndex = indexPath.indexAtPosition(indexPath.length - 1) + 1
+            nextIndexPath = indexPath.indexPathByRemovingLastIndex().indexPathByAddingIndex(newIndex)
+            cell.nextButton.addTarget(self, action: "changeCell:", forControlEvents: .TouchUpInside)
+        } else {
+            cell.nextButton.setTitle("Done", forState: .Normal)
+            cell.nextButton.addTarget(self, action: "doneDidPress:", forControlEvents: .TouchUpInside)
+        }
         return cell
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -54,6 +61,18 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     func changeCell(sender: AnyObject) {
         collectionView?.scrollToItemAtIndexPath(nextIndexPath!, atScrollPosition: .CenteredHorizontally, animated: false)
+    }
+    func doneDidPress(sender: AnyObject) {
+§
+        do {
+            let realm = try Realm()
+            
+            
+            realm.write {
+            }
+        } catch {
+            print(error)
+        }
     }
 }
 

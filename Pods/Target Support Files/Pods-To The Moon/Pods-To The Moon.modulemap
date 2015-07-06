@@ -1,0 +1,6 @@
+framework module Pods_To_The_Moon {
+  umbrella header "Pods-To The Moon-umbrella.h"
+
+  export *
+  module * { export * }
+}

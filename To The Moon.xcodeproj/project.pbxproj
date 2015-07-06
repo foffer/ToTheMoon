@@ -16,7 +16,9 @@
 		30C3879D1B4717C400D1A241 /* To_The_MoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3879C1B4717C400D1A241 /* To_The_MoonUITests.swift */; };
 		30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */; };
 		30EDDA6F1B4932C90025A936 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDDA6E1B4932C90025A936 /* Data.swift */; };
+		5944B3C01B4A8D560030688A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944B3BF1B4A8D560030688A /* Question.swift */; };
 		597AD7F91B49ACB80039D265 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */; };
+		CEFFE910E218893E9B8E5EAD /* Pods_To_The_Moon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,11 @@
 		30C3879E1B4717C400D1A241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C387AA1B471C0F00D1A241 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		30EDDA6E1B4932C90025A936 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		5944B3BF1B4A8D560030688A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_The_Moon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB976A43DDE36B014720B66 /* Pods-To The Moon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.debug.xcconfig"; sourceTree = "<group>"; };
+		ECAC2988D5C5372DBC79B421 /* Pods-To The Moon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.release.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFFE910E218893E9B8E5EAD /* Pods_To_The_Moon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +94,8 @@
 				30C387901B4717C400D1A241 /* To The MoonTests */,
 				30C3879B1B4717C400D1A241 /* To The MoonUITests */,
 				30C3877A1B4717C400D1A241 /* Products */,
+				6C6431DE095E13DC44191AA2 /* Pods */,
+				71FDB605FD254BE02770D1DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +114,7 @@
 			children = (
 				30C3877C1B4717C400D1A241 /* AppDelegate.swift */,
 				30C3877E1B4717C400D1A241 /* MainViewController.swift */,
+				5944B3BE1B4A83810030688A /* Model */,
 				30EDDA6E1B4932C90025A936 /* Data.swift */,
 				30C387801B4717C400D1A241 /* Main.storyboard */,
 				597AD7F81B49ACB80039D265 /* CollectionViewFlowLayout.swift */,
@@ -134,6 +144,31 @@
 			path = "To The MoonUITests";
 			sourceTree = "<group>";
 		};
+		5944B3BE1B4A83810030688A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5944B3BF1B4A8D560030688A /* Question.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6C6431DE095E13DC44191AA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EB976A43DDE36B014720B66 /* Pods-To The Moon.debug.xcconfig */,
+				ECAC2988D5C5372DBC79B421 /* Pods-To The Moon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		71FDB605FD254BE02770D1DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C387A11B4717C400D1A241 /* Build configuration list for PBXNativeTarget "To The Moon" */;
 			buildPhases = (
+				59007EE442A905C59C7A44C4 /* Check Pods Manifest.lock */,
 				30C387751B4717C400D1A241 /* Sources */,
 				30C387761B4717C400D1A241 /* Frameworks */,
 				30C387771B4717C400D1A241 /* Resources */,
+				8BF47E077FB3613689D1696F /* Embed Pods Frameworks */,
+				C38E2902DAC002EB476F800B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +234,7 @@
 		30C387711B4717C400D1A241 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Christoffer Buusmann";
 				TargetAttributes = {
@@ -260,6 +299,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59007EE442A905C59C7A44C4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BF47E077FB3613689D1696F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38E2902DAC002EB476F800B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30C387751B4717C400D1A241 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,6 +355,7 @@
 				597AD7F91B49ACB80039D265 /* CollectionViewFlowLayout.swift in Sources */,
 				30C3877F1B4717C400D1A241 /* MainViewController.swift in Sources */,
 				30C387AB1B471C0F00D1A241 /* QuestionCollectionViewCell.swift in Sources */,
+				5944B3C01B4A8D560030688A /* Question.swift in Sources */,
 				30C3877D1B4717C400D1A241 /* AppDelegate.swift in Sources */,
 				30EDDA6F1B4932C90025A936 /* Data.swift in Sources */,
 			);
@@ -407,6 +495,7 @@
 		};
 		30C387A21B4717C400D1A241 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB976A43DDE36B014720B66 /* Pods-To The Moon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -422,6 +511,7 @@
 		};
 		30C387A31B4717C400D1A241 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECAC2988D5C5372DBC79B421 /* Pods-To The Moon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

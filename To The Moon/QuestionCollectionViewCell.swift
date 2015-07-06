@@ -53,6 +53,7 @@ class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
             "question" : "\(questionLabel.text!)",
             "score" : scoreSlider.value
         ]
+
         delegate?.nextDidPress(score)
 
     }
