@@ -17,6 +17,7 @@ protocol QuestionInterface {
 class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
     
     @IBOutlet var questionLabel : UILabel!
+    @IBOutlet var questionDescriptionLabel: UILabel!
     @IBOutlet var quoteLabel    : UILabel!
     @IBOutlet var authorLabel   : UILabel!
     @IBOutlet var scoreLabel    : UILabel!
@@ -37,9 +38,11 @@ class QuestionCollectionViewCell: UICollectionViewCell, QuestionInterface {
     
     func configureCell(question:[String:String]) {
         if let  questionText = question["title"],
+            questionDescription = question["question"],
                 quoteText = question["quote"],
                 authorText = question["author"] {
                     questionLabel.text = questionText ?? ""
+                    questionDescriptionLabel.text = questionDescription ?? ""
                     quoteLabel.text = quoteText ?? ""
                     authorLabel.text = authorText ?? ""
         }

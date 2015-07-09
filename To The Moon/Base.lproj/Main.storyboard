@@ -10,16 +10,17 @@
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-UltraLight</string>
-            <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-Italic</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
+            <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-Regular</string>
+            <string>AvenirNext-UltraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -44,18 +45,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="549"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-5r-doT">
-                                            <rect key="frame" x="250" y="38" width="99.5" height="33"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-5r-doT">
+                                            <rect key="frame" x="225" y="38" width="149" height="33"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siP-qc-gjw">
-                                            <rect key="frame" x="187" y="82" width="227" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="227" id="2xV-h2-7fg"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -86,45 +78,64 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-hB-Uo5">
-                                            <rect key="frame" x="281" y="112" width="37.5" height="16.5"/>
+                                            <rect key="frame" x="281" y="182" width="37.5" height="16.5"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnN-Qa-enk">
-                                            <rect key="frame" x="8" y="8" width="54" height="30"/>
+                                            <rect key="frame" x="8" y="8" width="54" height="33"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                            <state key="normal" title="Dismiss">
+                                            <state key="normal" title="Cancel">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="dismissDidPress:" destination="NIL-fr-Pop" eventType="touchUpInside" id="nv3-c8-vhX"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azn-x5-1G5">
+                                            <rect key="frame" x="8" y="152" width="584" height="25"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxG-5d-HWM">
+                                            <rect key="frame" x="8" y="76" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="TfX-Gc-prR" firstAttribute="top" secondItem="cmV-hB-Uo5" secondAttribute="bottom" constant="60.5" id="0UY-TO-Ws7"/>
+                                    <constraint firstItem="cmV-hB-Uo5" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="4m2-Bu-VsL"/>
+                                    <constraint firstItem="cmV-hB-Uo5" firstAttribute="top" secondItem="Azn-x5-1G5" secondAttribute="bottom" constant="5" id="7Df-Vn-hgN"/>
                                     <constraint firstItem="TfX-Gc-prR" firstAttribute="leading" secondItem="NIL-fr-Pop" secondAttribute="leadingMargin" id="9xP-Sk-yvn"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="CxG-5d-HWM" secondAttribute="trailing" id="Bam-bq-Dff"/>
                                     <constraint firstItem="jkx-5r-doT" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="CXt-J0-aWJ"/>
+                                    <constraint firstItem="CxG-5d-HWM" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="M7t-CQ-N9Y"/>
                                     <constraint firstItem="kqP-L9-m6N" firstAttribute="leading" secondItem="NIL-fr-Pop" secondAttribute="leadingMargin" id="Qau-zV-l3Q"/>
                                     <constraint firstItem="jkx-5r-doT" firstAttribute="top" secondItem="NIL-fr-Pop" secondAttribute="topMargin" constant="30" id="RMv-gI-p2O"/>
-                                    <constraint firstItem="cmV-hB-Uo5" firstAttribute="top" secondItem="siP-qc-gjw" secondAttribute="bottom" constant="5" id="Uvh-g1-Hsk"/>
                                     <constraint firstItem="TfX-Gc-prR" firstAttribute="centerY" secondItem="NIL-fr-Pop" secondAttribute="centerY" id="a4u-Uf-o7B"/>
-                                    <constraint firstItem="siP-qc-gjw" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="cTb-Mu-MQa"/>
                                     <constraint firstItem="TfX-Gc-prR" firstAttribute="trailing" secondItem="NIL-fr-Pop" secondAttribute="trailingMargin" id="eDH-bj-6j4"/>
-                                    <constraint firstItem="siP-qc-gjw" firstAttribute="top" secondItem="jkx-5r-doT" secondAttribute="bottom" constant="11" id="gwA-EM-XwH"/>
+                                    <constraint firstItem="Azn-x5-1G5" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="eoa-7D-J3v"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="kqP-L9-m6N" secondAttribute="bottom" constant="14" id="hKa-1F-ZXa"/>
+                                    <constraint firstItem="Azn-x5-1G5" firstAttribute="trailing" secondItem="NIL-fr-Pop" secondAttribute="trailingMargin" id="jLx-2i-m85"/>
                                     <constraint firstItem="Yru-0K-0M6" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="q3j-0P-lNe"/>
-                                    <constraint firstItem="cmV-hB-Uo5" firstAttribute="centerX" secondItem="NIL-fr-Pop" secondAttribute="centerX" id="scK-e6-63p"/>
+                                    <constraint firstItem="Azn-x5-1G5" firstAttribute="leading" secondItem="NIL-fr-Pop" secondAttribute="leadingMargin" id="qQa-iM-DTh"/>
+                                    <constraint firstItem="CxG-5d-HWM" firstAttribute="leading" secondItem="NIL-fr-Pop" secondAttribute="leadingMargin" id="sMy-7o-rGd"/>
+                                    <constraint firstItem="CxG-5d-HWM" firstAttribute="top" secondItem="jkx-5r-doT" secondAttribute="bottom" constant="5" id="tZx-1J-d0e"/>
                                     <constraint firstItem="kqP-L9-m6N" firstAttribute="trailing" secondItem="NIL-fr-Pop" secondAttribute="trailingMargin" id="xNI-C0-yZw"/>
                                     <constraint firstItem="Yru-0K-0M6" firstAttribute="top" secondItem="TfX-Gc-prR" secondAttribute="bottom" constant="30" id="yMN-xJ-Lz1"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="authorLabel" destination="cmV-hB-Uo5" id="dGW-jL-Esm"/>
                                     <outlet property="nextButton" destination="kqP-L9-m6N" id="xkO-ha-pyT"/>
+                                    <outlet property="questionDescriptionLabel" destination="CxG-5d-HWM" id="KJb-sa-N8f"/>
                                     <outlet property="questionLabel" destination="jkx-5r-doT" id="x2L-RM-SBj"/>
-                                    <outlet property="quoteLabel" destination="siP-qc-gjw" id="6JC-XU-pit"/>
+                                    <outlet property="quoteLabel" destination="Azn-x5-1G5" id="8dc-Uj-Vpa"/>
                                     <outlet property="scoreLabel" destination="Yru-0K-0M6" id="GTI-0s-Twj"/>
                                     <outlet property="scoreSlider" destination="TfX-Gc-prR" id="hpe-iX-9GQ"/>
                                 </connections>
