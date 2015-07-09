@@ -85,12 +85,12 @@ class NewIdeaViewController: UICollectionViewController, UICollectionViewDelegat
         idea.name = ideaName
         idea.uuid = NSUUID().UUIDString
         
-        var average = 0
+        var sum = 0
         for q in scoreArr! {
             idea.questions.append(q)
-            average += q.score
+            sum += q.score
         }
-        idea.overallScore = average / scoreArr!.count
+        idea.overallScore = sum
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
             let realm = try! Realm()

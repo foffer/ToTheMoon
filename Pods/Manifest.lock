@@ -19,10 +19,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Realm:
-    :commit: d404ffd2c9abf5e2cbc3b0789052af803deda5bc
+    :commit: 4f2dcd95b3a5b573983f03d8eb1738c4796497f3
     :git: https://github.com/realm/realm-cocoa.git
   RealmSwift:
-    :commit: d404ffd2c9abf5e2cbc3b0789052af803deda5bc
+    :commit: 4f2dcd95b3a5b573983f03d8eb1738c4796497f3
     :git: https://github.com/realm/realm-cocoa.git
 
 SPEC CHECKSUMS:

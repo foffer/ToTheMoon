@@ -22,6 +22,7 @@
 		59749AB31B4B0F2000966B2E /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */; };
 		59749ABA1B4B39EA00966B2E /* IdeaDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749AB91B4B39EA00966B2E /* IdeaDetailTableView.swift */; };
 		59749ABC1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59749ABB1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift */; };
+		59B94E291B4DA6CA0094D084 /* IdeaDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B94E281B4DA6CA0094D084 /* IdeaDetailHeaderView.swift */; };
 		CEFFE910E218893E9B8E5EAD /* Pods_To_The_Moon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		59749AB21B4B0F2000966B2E /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
 		59749AB91B4B39EA00966B2E /* IdeaDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaDetailTableView.swift; sourceTree = "<group>"; };
 		59749ABB1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaDetailTableViewCell.swift; sourceTree = "<group>"; };
+		59B94E281B4DA6CA0094D084 /* IdeaDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaDetailHeaderView.swift; sourceTree = "<group>"; };
 		5FD7AB5E16E2314D6D6CAAA2 /* Pods_To_The_Moon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_The_Moon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB976A43DDE36B014720B66 /* Pods-To The Moon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.debug.xcconfig"; sourceTree = "<group>"; };
 		ECAC2988D5C5372DBC79B421 /* Pods-To The Moon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To The Moon.release.xcconfig"; path = "Pods/Target Support Files/Pods-To The Moon/Pods-To The Moon.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				59749AB81B4B2E0A00966B2E /* Supporting Files */,
 				59749AB91B4B39EA00966B2E /* IdeaDetailTableView.swift */,
 				59749ABB1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift */,
+				59B94E281B4DA6CA0094D084 /* IdeaDetailHeaderView.swift */,
 			);
 			path = "To The Moon";
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B94E291B4DA6CA0094D084 /* IdeaDetailHeaderView.swift in Sources */,
 				5944B3C21B4A91830030688A /* Idea.swift in Sources */,
 				59749ABC1B4B3C7C00966B2E /* IdeaDetailTableViewCell.swift in Sources */,
 				30C3877F1B4717C400D1A241 /* NewIdeaViewController.swift in Sources */,

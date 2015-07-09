@@ -14,6 +14,7 @@ class IdeaDetailTableView: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,5 +26,27 @@ class IdeaDetailTableView: UITableViewController {
         let q = questions![indexPath.row]
         cell.configureCell(q)
         return cell
+    }
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCellWithIdentifier("ideaDetailHeader") as! IdeaDetailHeaderView
+
+        header.scoreLabel.text = "\(idea!.overallScore)"
+        var verdictString: String?
+        switch idea!.overallScore {
+        case 0..<50:
+            verdictString = "Your idea scored 50 or below. There are better things you should be doing. Move along skip!"
+        case 50..<75:
+            verdictString = "Your idea has potential, but you might find it difficult to get funding."
+        case 75...100:
+            verdictString = "You got 75 points or more. Full steam ahead captain!"
+        default:
+            verdictString = "Could not get verdict"
+        }
+        header.headerLabel.text = verdictString
+        
+        return header
+    }
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60.0
     }
 }
