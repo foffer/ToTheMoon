@@ -15,6 +15,12 @@ class IdeasTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        navigationController?.navigationBar.barTintColor = BlueColor
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar
+        tableView.backgroundColor = BlueColor
         fetchData()
     }
     
@@ -35,6 +41,12 @@ class IdeasTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ideaCell", forIndexPath: indexPath) as! IdeaTableViewCell
         
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = Row0Color
+        } else {
+            cell.backgroundColor = Row1Color
+        }
+
         if let idea = ideaArr?[indexPath.row] {
             cell.configureCell(idea)
         }
