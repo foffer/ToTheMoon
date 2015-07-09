@@ -15,12 +15,12 @@ class IdeasTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.translucent = false
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        navigationController?.navigationBar.barTintColor = BlueColor
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//        navigationController?.navigationBar.translucent = false
+//        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+//        navigationController?.navigationBar.barTintColor = BlueColor
+//        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar
-        tableView.backgroundColor = BlueColor
+        tableView.backgroundColor = BlackColor
         fetchData()
     }
     
@@ -41,15 +41,19 @@ class IdeasTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ideaCell", forIndexPath: indexPath) as! IdeaTableViewCell
         
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = Row0Color
-        } else {
-            cell.backgroundColor = Row1Color
-        }
-
         if let idea = ideaArr?[indexPath.row] {
             cell.configureCell(idea)
+            
+            switch idea.overallScore {
+            case 0..<50:
+                cell.backgroundColor = RedColor
+            case 50..<75:
+                cell.backgroundColor = YellowColor
+            default:
+                cell.backgroundColor = BlueColor
+            }
         }
+
         
         return cell
     }
