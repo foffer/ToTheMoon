@@ -20,7 +20,8 @@ class IdeasTableViewController: UITableViewController {
 //        navigationController?.navigationBar.barTintColor = BlueColor
 //        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar
-        tableView.backgroundColor = BlackColor
+        tableView.backgroundColor = DarkBlueColor
+        
         fetchData()
     }
     
@@ -43,20 +44,22 @@ class IdeasTableViewController: UITableViewController {
         
         if let idea = ideaArr?[indexPath.row] {
             cell.configureCell(idea)
+            cell.backgroundColor = BlueColor
             
-            switch idea.overallScore {
-            case 0..<50:
-                cell.backgroundColor = RedColor
-            case 50..<75:
-                cell.backgroundColor = YellowColor
-            default:
-                cell.backgroundColor = BlueColor
-            }
+//            switch idea.overallScore {
+//            case 0..<50:
+//                cell.backgroundColor = RedColor
+//            case 50..<75:
+//                cell.backgroundColor = YellowColor
+//            default:
+//                cell.backgroundColor = BlueColor
+//            }
         }
 
         
         return cell
     }
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()

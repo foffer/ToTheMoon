@@ -14,12 +14,11 @@
             <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-Regular</string>
-            <string>AvenirNext-Regular</string>
             <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-Regular</string>
-            <string>AvenirNext-UltraLight</string>
-            <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-Regular</string>
+            <string>AvenirNext-Regular</string>
+            <string>AvenirNext-UltraLight</string>
             <string>AvenirNext-UltraLight</string>
         </mutableArray>
     </customFonts>
@@ -161,16 +160,17 @@
         <scene sceneID="j4a-Kn-buP">
             <objects>
                 <tableViewController id="nTg-zK-lZw" customClass="IdeasTableViewController" customModule="To_The_Moon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="j8w-bY-J1R">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="j8w-bY-J1R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.1764705882352941" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ideaCell" rowHeight="85" id="Kuu-cy-he3" customClass="IdeaTableViewCell" customModule="To_The_Moon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kuu-cy-he3" id="L3c-R2-h1P">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idea" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aD-q6-3zd">
@@ -238,6 +238,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.1764705882352941" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ideaDetailHeader" rowHeight="60" id="We2-bV-Fkb" customClass="IdeaDetailHeaderView" customModule="To_The_Moon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="60"/>
@@ -246,34 +247,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcX-Ih-RdV">
-                                            <rect key="frame" x="518" y="13" width="69" height="33"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verdict" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6t-UA-njC">
-                                            <rect key="frame" x="8" y="13" width="450" height="33"/>
+                                            <rect key="frame" x="8" y="13" width="584" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" priority="250" constant="450" id="NIa-Jr-Ncp"/>
+                                                <constraint firstAttribute="width" priority="750" constant="584" id="dzb-bz-E5Z"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="hD9-su-KOa"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="NIa-Jr-Ncp"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="TcX-Ih-RdV" firstAttribute="centerY" secondItem="zft-Y1-tX0" secondAttribute="centerY" id="6dL-hn-VXM"/>
                                         <constraint firstItem="E6t-UA-njC" firstAttribute="centerY" secondItem="zft-Y1-tX0" secondAttribute="centerY" id="9xj-ag-SYI"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="E6t-UA-njC" secondAttribute="leading" id="HDJ-tx-NVe"/>
-                                        <constraint firstItem="TcX-Ih-RdV" firstAttribute="leading" secondItem="E6t-UA-njC" secondAttribute="trailing" constant="60" id="Ptl-fd-AtG"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="TcX-Ih-RdV" secondAttribute="trailing" constant="5" id="huF-Wf-fCb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="E6t-UA-njC" secondAttribute="trailing" id="wuF-OJ-vrY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="headerLabel" destination="E6t-UA-njC" id="tLh-jz-VTp"/>
-                                    <outlet property="scoreLabel" destination="TcX-Ih-RdV" id="SVZ-qr-Nnd"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ideaDetailQuestionCell" id="4oZ-Ao-MI8" customClass="IdeaDetailTableViewCell" customModule="To_The_Moon" customModuleProvider="target">
@@ -286,13 +285,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3j-LO-PmL">
                                             <rect key="frame" x="8" y="6" width="100" height="33"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXd-Np-L2g">
                                             <rect key="frame" x="531" y="5" width="60.5" height="33"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -303,6 +302,7 @@
                                         <constraint firstItem="r3j-LO-PmL" firstAttribute="centerY" secondItem="anb-3r-nWP" secondAttribute="centerY" id="rTP-FZ-Mer"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="questionLabel" destination="r3j-LO-PmL" id="EU7-y6-1DM"/>
                                     <outlet property="scoreLabel" destination="QXd-Np-L2g" id="d1W-Tk-Ejl"/>

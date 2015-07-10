@@ -11,11 +11,16 @@ import UIKit
 
 class IdeaTableViewCell: UITableViewCell {
     
+    var newContentView: UIView?
     
     @IBOutlet var ideaLabel:UILabel!
     @IBOutlet var createdAtLabel:UILabel!
     @IBOutlet var scoreLabel:UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+//        configureViews()
+    }
     override func prepareForReuse() {
         super.prepareForReuse()
     }
@@ -29,5 +34,20 @@ class IdeaTableViewCell: UITableViewCell {
         let dateString = dateFormatter.stringFromDate(idea.createdAt)
         createdAtLabel.text = dateString
         
+    }
+    func configureViews() {
+        let inset:CGFloat = 5.0
+        let frame = CGRectMake(inset, inset, CGRectGetWidth(contentView.bounds) - 60, CGRectGetHeight(contentView.frame) - 10)
+        
+        print(frame)
+        newContentView = UIView(frame: frame)
+        print(newContentView?.frame)
+        newContentView?.layer.borderWidth = 0.5
+        newContentView?.layer.borderColor = UIColor.whiteColor().CGColor
+//        contentView.addSubview(newContentView!)
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
     }
 }
